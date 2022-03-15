@@ -33,7 +33,7 @@ class Pelicula(models.Model):
         return u"%s" % self.nombre
 
 
-class Cliente(models.Model)
+class Cliente(models.Model):
     idCliente = models.IntegerField(primary_key=True)
     nombre = models.TextField(blank=False, null=False)
     apellidos = models.TextField(blank=False, null=False)
