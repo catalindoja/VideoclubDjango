@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <h1 style="text-align: center;">Empleados</h1>
+    <ul>
+        {% for empleado in empleados %}
+            <li>
+                {{ empleado.idEmpleado }} - {{ empleado.nombre }} - {{ empleado.apellido }} - {{ videoclub.idVideoclub }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
