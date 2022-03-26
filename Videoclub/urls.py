@@ -19,6 +19,8 @@ import videoclub.views
 
 urlpatterns = [
     path('', videoclub.views.index),
+    path('clientes', videoclub.views.cliente),
+    path('peliculas', videoclub.views.pelicula),
     path('main/', include('videoclub.urls')),
     path('admin/', admin.site.urls),
 ]
