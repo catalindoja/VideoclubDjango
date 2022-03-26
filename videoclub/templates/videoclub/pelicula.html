@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1 style="text-align: center">Peliculas</h1>
+    <ul>
+        {% for pelicula in peliculas %}
+                <a href="/{{ pelicula.idPelicula }}" style=""> <h3>Titulo: {{ pelicula.nombre }}</h3>
+                Genero: {{ pelicula.genero }}  Duración: {{ pelicula.duracion }}
+                Fechas de lanzamiento: {{ pelicula.fecha_de_lanzamiento }} Videoclub: {{ pelicula.idVideoclub }}</a>
+        {% endfor %}
+    </ul>
+</body>
+</html>
