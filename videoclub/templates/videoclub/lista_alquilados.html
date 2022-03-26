@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista alquilados</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" type="text/css"/>
+</head>
+<body>
+<div class="topnav">
+  <a href="videoclub">Videoclub</a>
+  <a href="empleados">Empleados</a>
+  <a class="active" href="peliculas">Peliculas</a>
+  <a href="clientes">Clientes</a>
+</div>
+<h1 style="text-align: center;">Videoclubs</h1>
+    <ul>
+        {% for alquilado in alquilados %}
+            <li>
+                idAlquilado: {{ alquilado.idVideoclub }}. idVideoclub: {{ alquilado.idVideoclub }}.
+                idEmpleado: {{ alquilado.idVideoclub }}. idCliente: {{ alquilado.idVideoclub }}.
+                idPelicula: {{ alquilado.idVideoclub }}. Fecha alquiler: {{ alquilado.fecha_de_alquiler }}.
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

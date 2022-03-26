@@ -47,7 +47,8 @@ body {
     <ul>
         {% for empleado in empleados %}
             <li>
-                {{ empleado.idEmpleado }} - {{ empleado.nombre }} - {{ empleado.apellido }} - {{ videoclub.idVideoclub }}
+                IdEmpleado: {{ empleado.idEmpleado }}. Nombre: {{ empleado.nombre }}.
+                Apellidos: {{ empleado.apellidos }}. Videoclub al que pertenece: {{ videoclub.idVideoclub }}
             </li>
         {% endfor %}
     </ul>
