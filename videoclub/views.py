@@ -29,7 +29,7 @@ def cliente(request):
 
 def alquilado(request):
     alquilado = Alquilado.objects.all()
-    dictionary = {'clientes': cliente}
+    dictionary = {'alquilado': alquilado}
     return render(request, 'videoclub/lista_alquilados.html', dictionary)
 
 
@@ -37,4 +37,18 @@ def alquilado(request):
 def alquilar(request):
     context = {}
     context['form'] = AlquiladoForm()
+
+    #template_name = "videoclub/alquilar_pelicula.html"
+    def get(self,request):
+        form = AlquiladoForm()
+        return render(request, "videoclub/alquilar_pelicula.html", context)
+
+    def post(self,request):
+        form = AlquiladoForm(request.POST)
+        if form.is_valid():
+            videoclub = form.cleande_data['Videoclub']
+            print(videoclub)
+            print("")
+            args = { 'form' : form, 'texthtml': videoclub}
+            return render(request, self.template_name, context)
     return render(request, "videoclub/alquilar_pelicula.html", context)
