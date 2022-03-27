@@ -23,5 +23,6 @@ urlpatterns = [
     path('empleados', videoclub.views.empleado),
     path('clientes', videoclub.views.cliente),
     path('peliculas', videoclub.views.pelicula),
+    path('alquilar', videoclub.views.alquilar),
     path('admin/', admin.site.urls),
 ]

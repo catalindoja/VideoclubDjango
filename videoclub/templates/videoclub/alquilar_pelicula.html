@@ -1,10 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Lista alquilados</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" type="text/css"/>
 </head>
 <body>
-
+<div class="topnav">
+  <a href="videoclub">Videoclub</a>
+  <a href="empleados">Empleados</a>
+  <a class="active" href="peliculas">Peliculas</a>
+  <a href="clientes">Clientes</a>
+</div>
+<h1 style="text-align: center;">Alquilar una pelicula</h1>
+    <form action = "" method = "post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value=Submit">
+    </form>
 </body>
 </html>
