@@ -10,4 +10,6 @@ urlpatterns = [
     path('empleados', views.empleado),
     path('peliculas', views.pelicula),
     path('clientes', views.cliente),
+    path('lista_alquilados', views.alquilado),
+    path('alquilar_pelicula', views.alquilar),
 ]

@@ -10,14 +10,16 @@
 <div class="topnav">
   <a href="videoclub">Videoclub</a>
   <a href="empleados">Empleados</a>
-  <a class="active" href="peliculas">Peliculas</a>
+  <a  href="peliculas">Peliculas</a>
   <a href="clientes">Clientes</a>
+    <a class="active" href="lista_alquilados">Lista de peliculas alquiladas</a>
+    <a href="alquilar_pelicula">Alquilar peliculas</a>
 </div>
-<h1 style="text-align: center;">Videoclubs</h1>
+<h1 style="text-align: center;">Lista de alquilados</h1>
     <ul>
         {% for alquilado in alquilados %}
             <li>
-                idAlquilado: {{ alquilado.idVideoclub }}. idVideoclub: {{ alquilado.idVideoclub }}.
+                idAlquilado: {{ alquilado.idAlquilado }}. idVideoclub: {{ alquilado.idVideoclub }}.
                 idEmpleado: {{ alquilado.idVideoclub }}. idCliente: {{ alquilado.idVideoclub }}.
                 idPelicula: {{ alquilado.idVideoclub }}. Fecha alquiler: {{ alquilado.fecha_de_alquiler }}.
             </li>

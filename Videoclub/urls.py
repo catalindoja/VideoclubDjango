@@ -23,6 +23,7 @@ urlpatterns = [
     path('empleados', videoclub.views.empleado),
     path('clientes', videoclub.views.cliente),
     path('peliculas', videoclub.views.pelicula),
-    path('alquilar', videoclub.views.alquilar),
+    path('lista_alquilados', videoclub.views.alquilado),
+    path('alquilar_pelicula', videoclub.views.alquilar),
     path('admin/', admin.site.urls),
 ]

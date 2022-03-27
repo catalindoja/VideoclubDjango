@@ -20,10 +20,10 @@ class AlquiladoForm(forms.Form):
     for empleado in Empleado.objects.all():
         CHOICES_EMPLEADO.append((empleado.idEmpleado, empleado.nombre + " " + empleado.apellidos))
 
-    videoclub = forms.CharField(label='Videoclub: ', widget=forms.Select(choices=CHOICES_VIDEOCLUB), required=False)
-    empleado = forms.CharField(label='Empleado: ', widget=forms.Select(choices=CHOICES_EMPLEADO), required=False)
-    cliente = forms.CharField(label='Cliente: ', widget=forms.Select(choices=CHOICES_CLIENTE), required=False)
-    pelicula = forms.CharField(label='Pelicula: ', widget=forms.Select(choices=CHOICES_PELICULA), required=False)
+    videoclub = forms.CharField(label='Videoclub: ', widget=forms.Select(choices=CHOICES_VIDEOCLUB), required=True)
+    empleado = forms.CharField(label='Empleado: ', widget=forms.Select(choices=CHOICES_EMPLEADO), required=True)
+    cliente = forms.CharField(label='Cliente: ', widget=forms.Select(choices=CHOICES_CLIENTE), required=True)
+    pelicula = forms.CharField(label='Pelicula: ', widget=forms.Select(choices=CHOICES_PELICULA), required=True)
 
 
 

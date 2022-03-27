@@ -12,11 +12,15 @@
   <a href="empleados">Empleados</a>
   <a  href="peliculas">Peliculas</a>
   <a class="active" href="clientes">Clientes</a>
+    <a href="lista_alquilados">Lista de peliculas alquiladas</a>
+    <a href="alquilar_pelicula">Alquilar peliculas</a>
 </div>
   <h1 style="text-align: center">Clientes</h1>
     <ul>
         {% for cliente in clientes %}
-                <a href="/{{ cliente.idCliente }}" style=""> <h3> {{ cliente.nombre }}</h3> {{ cliente.apellidos }}</a>
+        <li>
+                 Nombre: {{ cliente.nombre }}. Apellidos: {{ cliente.apellidos }}
+        </li>
         {% endfor %}
     </ul>
 </body>
